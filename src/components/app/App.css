@@ -31,3 +31,265 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  height: 66px;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+}
+.banner-in {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li{
+  list-style: none;
+}
+.icon-link{
+  margin-right: 20px;
+}
+.search-form{
+  position: relative;
+  margin-right:5px;
+}
+span.searchIcon{
+  fill: #757575;
+  height: 14px;
+  left: 8px;
+  position: absolute;
+  top: 10px;
+  width: 14px;
+}
+.search-box>input{
+  //position: absolute;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 35px;
+  padding: 0 10px 0 32px;
+  width: 300px;
+  color: #757575;
+}
+
+button.close{
+  display:none
+}
+
+.top-nav{
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+.top-nav>ul{
+  padding-left: 0px;
+}
+.top-nav li{
+  display: inline-flex;
+  margin-left: 20px;
+}
+
+.top-nav li a{
+  text-decoration: none;
+  color: #757575;
+}
+
+.top-nav a:hover {
+  color: #424242;
+}
+
+.loginActions{
+  flex: 1 0 auto;
+  justify-content: flex-end;
+  margin-left: 165px;
+}
+
+.signBtn{
+  display: flex;
+  margin: 0 0 0 5px;
+}
+
+.button>span{
+  display: inline-flex;
+  align-items: center;
+  flex: 1;
+}
+.button{
+  height: 30px;
+  margin-left: 5px;
+  border: 1px solid transparent;
+  display: flex;
+  vertical-align: top;
+  border-radius: 3px;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 30px;
+}
+.simple-btn{
+  background: #fff;
+  border-color: #e8e8e8;
+}
+.default{
+  background: white;
+  border-color: #e8e8e8;
+  color: black;
+  fill: #000;
+}
+.orange{
+  background: #da552f;
+  color: white;
+  text: white;
+}
+a{
+  text-decoration: none;
+}
+.font{
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.page-container{
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  //justify-content: space-between;
+  margin-top: 20px;
+  min-width: 1100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 320px;
+}
+.container{
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.page-container>.main{
+  padding: 10px;
+  box-shadow: 2 0 0 5;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 70%;
+}
+.content{
+  position: relative;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  background: white;
+}
+
+.content-title{
+  padding: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.content>.item{
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px;
+}
+.content .item .link{
+  display: flex;
+}
+.content .item .link img.product-img{
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+.sub-link img.user-img{
+  display: flex;
+  border-radius: 50%;
+  border: 1px solid;
+  margin-left: -7px;
+}
+.flex{
+  display: flex;
+}
+.sidebar-right{
+  margin-left: 20px;
+  width: 30%;
+  color: black;
+}
+
+.base-line{
+  margin-top: 8px;
+  color: black;
+  fill: black;
+  margin-left: 8px;
+}
+.smalltext{
+  font-size: 13px;
+}
+.product-name{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+}
+.nb-subscribers{
+  margin-left: 9px;
+  padding-top: 5px;
+}
+.base-line .right{
+  /*margin-left: 30em;*/
+  position: absolute;
+  right: 15px;
+  border: 1px solid #e8e8e8;
+}
+
+.base-line .right span{
+  padding-left:8px;
+  padding-right: 8px;
+}
+.text-grey{
+  color: grey;
+}
+
+.container-foot{
+  padding: 20px;
+  font-size: 11px;
+}
+
+.container-foot a{
+  color: #da552f;
+}
+
+.align-right{
+  position: absolute;
+  right: 0px;
+}
+
+.container-header{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
