@@ -91,7 +91,9 @@ span.searchIcon{
 button.close{
   display:none
 }
-
+.button-lg{
+  height: 34px!important;
+}
 .top-nav{
   flex: 0 0 auto;
   margin-right: 20px;
@@ -133,7 +135,6 @@ button.close{
   height: 30px;
   margin-left: 5px;
   border: 1px solid transparent;
-  display: flex;
   vertical-align: top;
   border-radius: 3px;
   padding-left: 13px;
@@ -141,6 +142,7 @@ button.close{
   font-weight: 600;
   font-size: 11px;
   line-height: 30px;
+  text-align: center;
 }
 .simple-btn{
   background: #fff;
@@ -234,6 +236,10 @@ a{
 .flex{
   display: flex;
 }
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
 aside.sidebar-right{
   margin-left: 10px;
   width: 31%;
@@ -253,6 +259,9 @@ aside.sidebar-right{
 .mg-l-5{
   margin-left: 5px;
 }
+.mg-l-20{
+  margin-left: 20px;
+}
 .pd-20{
   padding: 20px;
 }
@@ -261,6 +270,30 @@ aside.sidebar-right{
 }
 .pd-15{
   padding: 15px;
+}
+.pd-l-10{
+  padding-left: 10px !important;
+}
+.pd-l-15{
+  padding-left: 15px !important;
+}
+.pd-l-20{
+  padding-left: 20px !important;
+}
+.pd-l-0{
+  padding-left: 0px !important;
+}
+.pd-r-0{
+  padding-right: 0px !important;
+}
+.pd-r-5{
+  padding-right: 5px !important;
+}
+.pd-r-15{
+  padding-right: 15px !important;
+}
+.pd-t-0{
+  padding-top: 0px !important;
 }
 .v-smalltext{
   font-size: 11px;
@@ -291,6 +324,7 @@ aside.sidebar-right{
 }
 .text-grey{
   color: grey;
+  fill: grey;
 }
 
 .container-foot{
@@ -351,12 +385,15 @@ aside.sidebar-right{
 .mg-b-0{
   margin-bottom: 0px;
 }
+.mg-b-10{
+  margin-bottom: 10px;
+}
+.mg-b-20{
+  margin-bottom: 20px;
+}
 .flex-end{
   display: flex;
   justify-content: flex-end;
-}
-.mg-b-10{
-  margin-bottom: 10px;
 }
 .mg-l-10{
   margin-left: 10px;
@@ -365,5 +402,61 @@ aside.sidebar-right{
   font-weight: 600;
 }
 .text-black{
-  color: #000;
+  color: #000 !important;
+  fill: #000;
+}
+.h-85{
+  height: 85px;
+}
+.text-white{
+  color: white;
+  fill: white;
+}
+.wdth-100{
+  width: 100%;
+}
+.input{
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background: #fff;
+  box-sizing: border-box;
+  height: 35px;
+  padding: 0 10px 0 32px;
+  width: 100%;
+  color: #757575;
+}
+.mg-l-0{
+  margin-left: 0px;
+}
+.mg-l-2{
+  margin-left: 2px !important;
+}
+.mg-l-a{
+  margin-left: auto;
+}
+.bold{
+  font-weight: 700;
+}
+.img-round{
+  /*border: 1px solid transparent;*/
+  border-radius: 50%;
+}
+.img-h-110{
+  height: 110px;
+  width: 100%;
+}
+.img-60{
+  height: 60px;
+  width: 60px;
+}
+.img-40{
+  height: 40px;
+  width: 40px;
+}
+.img-30{
+  height: 30px;
+  width: 30px;
+}
+.semibold{
+  font-weight: 600;
 }

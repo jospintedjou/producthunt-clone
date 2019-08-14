@@ -472,42 +472,45 @@ class App extends Component {
                             <div class="content mg-b-10">
                                 <div>
                                     <a href="" className="flex">
-                                        <div className="flex">
+                                        <div className="flex h-85">
                                             <div className="pd-10 f-w-600 text-black smalltext">
-                                                text text text text text text text text text text text text text text
-                                                text
-                                                text text text text text text
+                                                Founder depression, “going independent,” and the future of podcasting
                                             </div>
                                             <div>
-                                                <img className="user-img hg-100-pc" src="https://via.placeholder.com/85" alt=""/>
+                                                <img className="user-img hg-100-pc" src="https://via.placeholder.com/85"
+                                                     alt=""/>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                             <div className="flex v-smalltext text-grey flex-end">
-                                <span>Sponsored by</span> <img className="user-img hg-100-pc mg-l-10" src="https://via.placeholder.com/50x14" alt=""/>
+                                <span>Sponsored by</span> <img className="user-img hg-100-pc mg-l-10"
+                                                               src="https://via.placeholder.com/50x14" alt=""/>
                             </div>
                         </div>
                         <div className="container">
                             <div className="container-header flex font-size-init">
                                 <span>Newsletter </span>
                             </div>
-                            <div class="content pd-15">
+                            <div class="content pd-20">
+                                <a className="flex-col mg-b-20">
+                                    <div className="mg-b-10 img-h-110"
+                                         style={{backgroundImage: "url(" + "'https://via.placeholder.com/288x110'" + ")"}}></div>
+                                    <span className="product-name">GOOGLE FINALLY made it</span>
+                                </a>
                                 <div>
-                                    <a href="" className="img-container flex">
-                                        <div className="flex">
-                                            <div className="">
-                                                News
-                                            </div>
-                                            <div>
-                                                <img className="user-img" src="https://via.placeholder.com/24" alt=""/>
-                                            </div>
+                                    <span
+                                        className="bold">Get the best new products in your inbox, every day <span>👇</span> </span>
+                                    <form>
+                                        <div className="mg-t-10">
+                                            <input className="input button-lg pd-l-10" placeholder="Your email"
+                                                   name="email" type="email"
+                                                   value=""/>
                                         </div>
-                                    </a>
-                                </div>
-                                <div className="container-foot single-line flex smalltext">
-                                    <a href="">JOIN THEM ON MAKERS</a>
+                                        <button className="button button-lg orange wdth-100 mg-l-0 mg-t-10"><span>SUBSCRIBE</span>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -515,19 +518,37 @@ class App extends Component {
                             <div className="container-header flex font-size-init">
                                 <span>Latest Stories </span>
                             </div>
-                            <div class="content pd-15">
-                                <div>
-                                    <a href="" className="img-container flex">
-                                        <div className="user-img-box">
-                                            <img className="user-img hide"
-                                                 src={require('../../assets/images/hands-up.png')}
-                                                 alt=""/>
-                                            <img className="user-img" src="https://via.placeholder.com/24" alt=""/>
+                            <div class="content pd-l-15 pd-r-15">
+                                <div className="item pd-l-0 pd-r-0">
+                                    <a href="/" className="link">
+                                        <div>
+                                            <div className="smalltext semibold text-black">How We Built a Million-Dollar
+                                                YouTube Channel
+                                            </div>
+                                            <div className="product-desc smalltext text-grey">
+                                                By Jospin
+                                            </div>
                                         </div>
+                                        <img className="img-60 mg-l-20"
+                                             src={require('../../assets/images/img-001.gif')}/>
+                                    </a>
+                                </div>
+                                <div className="item pd-l-0 pd-r-0">
+                                    <a href="/" className="link">
+                                        <div>
+                                            <div className="smalltext semibold text-black">How We Built a Million-Dollar
+                                                YouTube Channel
+                                            </div>
+                                            <div className="product-desc smalltext text-grey">
+                                                By Jospin
+                                            </div>
+                                        </div>
+                                        <img className="img-60 mg-l-20"
+                                             src={require('../../assets/images/img-001.gif')}/>
                                     </a>
                                 </div>
                                 <div className="container-foot single-line flex smalltext">
-                                    <a href="">JOIN THEM ON MAKERS</a>
+                                    <a href="">READ MORE STORIES</a>
                                 </div>
                             </div>
                         </div>
@@ -535,19 +556,36 @@ class App extends Component {
                             <div className="container-header flex font-size-init">
                                 <span>Team hiring now </span>
                             </div>
-                            <div class="content pd-15">
-                                <div>
-                                    <a href="" className="img-container flex">
-                                        <div className="user-img-box">
-                                            <img className="user-img hide"
-                                                 src={require('../../assets/images/hands-up.png')}
-                                                 alt=""/>
-                                            <img className="user-img" src="https://via.placeholder.com/24" alt=""/>
+                            <div class="content pd-l-15 pd-r-15">
+                                <div className="item pd-l-0 pd-r-0">
+                                    <a href="/" className="link">
+                                        <div>
+                                            <div className="smalltext semibold text-black">InVision
+                                            </div>
+                                            <div className="product-desc smalltext text-grey">
+                                                The digital product design platform
+                                            </div>
                                         </div>
+                                        <img className="img-40 mg-l-a"
+                                             src="https://via.placeholder.com/40"/>
+                                    </a>
+                                </div>
+                                <div className="item pd-l-0 pd-r-0">
+                                    <a href="/" className="link">
+                                        <div>
+                                            <div className="smalltext semibold text-black">InVision
+                                            </div>
+                                            <div className="product-desc smalltext text-grey">
+                                                The digital product design platform
+                                            </div>
+                                        </div>
+                                        <img className="img-40 mg-l-a"
+                                             src="https://via.placeholder.com/40"/>
                                     </a>
                                 </div>
                                 <div className="container-foot single-line flex smalltext">
-                                    <a href="">JOIN THEM ON MAKERS</a>
+                                    <a className="text-black" href="/">VIEW ALL JOBS</a><a className="pd-l-20" href="">POST
+                                    A JOB</a>
                                 </div>
                             </div>
                         </div>
@@ -555,19 +593,89 @@ class App extends Component {
                             <div className="container-header flex font-size-init">
                                 <span>Top Discussions </span>
                             </div>
-                            <div class="content pd-15">
-                                <div>
-                                    <a href="" className="img-container flex">
-                                        <div className="user-img-box">
-                                            <img className="user-img hide"
-                                                 src={require('../../assets/images/hands-up.png')}
-                                                 alt=""/>
-                                            <img className="user-img" src="https://via.placeholder.com/24" alt=""/>
+                            <div class="content pd-l-15 pd-r-15">
+                                <div className="item pd-l-0 pd-r-0">
+                                    <a href="/" className="link">
+                                        <div>
+                                            <div className="pd-r-5 smalltext semibold text-black">
+                                                How do you convince yourself "this idea" will work out?
+                                            </div>
                                         </div>
+                                        <img className="img-30 img-round mg-l-a"
+                                             src="https://via.placeholder.com/30"/>
                                     </a>
+                                    <div className="base-line flex v-smalltext text-grey">
+                                        <div className="left flex">
+                                            <span>
+                                                <svg width="9" height="8" viewBox="0 0 9 8"
+                                                     xmlns="http://www.w3.org/2000/svg" class="upvoteIcon_f942d"><path
+                                                    d="M9 8H0l4.5-8L9 8z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <span className="mg-l-2">42</span>
+                                            </span>
+                                            <a className="mg-l-20" href="">
+                                                <svg width="12" height="11" viewBox="0 0 12 11"
+                                                     xmlns="http://www.w3.org/2000/svg" class="commentIcon_f39d0">
+                                                    <path
+                                                        d="M2.012 7.832C1.21 7.052.727 6.045.727 4.946c0-2.48 2.463-4.491 5.5-4.491 3.038 0 5.5 2.01 5.5 4.491 0 2.48-2.462 4.492-5.5 4.492a6.562 6.562 0 0 1-2.13-.35c-1.07.62-3.166 1.44-3.166 1.44s.7-1.685 1.081-2.696z"
+                                                        fill="#FFF" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <span className="mg-l-2">30</span>
+                                            </a>
+                                            <a className="mg-l-20" href="">
+                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4.334 9l.778-.778L2.89 6H6c1.834 0 3.334-1.5 3.334-3.333V1H8.223v1.667c0 1.222-1 2.222-2.222 2.222H2.89l2.222-2.222-.778-.778-3.167 3.167a.537.537 0 0 0 0 .777L4.334 9z"
+                                                        stroke="#999" fill="#999" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <span className="mg-l-2">Reply</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="item pd-l-0 pd-r-0">
+                                    <a href="/" className="link">
+                                        <div>
+                                            <div className="pd-r-5 smalltext semibold text-black">
+                                                How do you convince yourself "this idea" will work out?
+                                            </div>
+                                        </div>
+                                        <img className="img-30 img-round mg-l-a"
+                                             src="https://via.placeholder.com/30"/>
+                                    </a>
+                                    <div className="base-line flex v-smalltext text-grey">
+                                        <div className="left flex">
+                                            <span>
+                                                <svg width="9" height="8" viewBox="0 0 9 8"
+                                                     xmlns="http://www.w3.org/2000/svg" class="upvoteIcon_f942d"><path
+                                                    d="M9 8H0l4.5-8L9 8z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <span className="mg-l-2">42</span>
+                                            </span>
+                                            <a className="mg-l-20" href="">
+                                                <svg width="12" height="11" viewBox="0 0 12 11"
+                                                     xmlns="http://www.w3.org/2000/svg" class="commentIcon_f39d0">
+                                                    <path
+                                                        d="M2.012 7.832C1.21 7.052.727 6.045.727 4.946c0-2.48 2.463-4.491 5.5-4.491 3.038 0 5.5 2.01 5.5 4.491 0 2.48-2.462 4.492-5.5 4.492a6.562 6.562 0 0 1-2.13-.35c-1.07.62-3.166 1.44-3.166 1.44s.7-1.685 1.081-2.696z"
+                                                        fill="#FFF" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <span className="mg-l-2">30</span>
+                                            </a>
+                                            <a className="mg-l-20" href="">
+                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4.334 9l.778-.778L2.89 6H6c1.834 0 3.334-1.5 3.334-3.333V1H8.223v1.667c0 1.222-1 2.222-2.222 2.222H2.89l2.222-2.222-.778-.778-3.167 3.167a.537.537 0 0 0 0 .777L4.334 9z"
+                                                        stroke="#999" fill="#999" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <span className="mg-l-2">Reply</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="container-foot single-line flex smalltext">
-                                    <a href="">JOIN THEM ON MAKERS</a>
+                                    <a href="">VIEW MORE DISCUSSIONS</a>
                                 </div>
                             </div>
                         </div>
@@ -575,19 +683,14 @@ class App extends Component {
                             <div className="container-header flex font-size-init">
                                 <span>Untitled </span>
                             </div>
-                            <div class="content pd-15">
-                                <div>
-                                    <a href="" className="img-container flex">
-                                        <div className="user-img-box">
-                                            <img className="user-img hide"
-                                                 src={require('../../assets/images/hands-up.png')}
-                                                 alt=""/>
-                                            <img className="user-img" src="https://via.placeholder.com/24" alt=""/>
-                                        </div>
+                            <div class="content pd-20">
+                                <a className="flex-col">
+                                    <div className="img-h-110"
+                                         style={{backgroundImage: "url(" + "'https://via.placeholder.com/278x114'" + ")"}}></div>
+                                </a>
+                                <div className="flex">
+                                    <a className="button button-lg default wdth-100 mg-l-0 mg-t-10" href="/"><span>SIGNUP NOW</span>
                                     </a>
-                                </div>
-                                <div className="container-foot single-line flex smalltext">
-                                    <a href="">JOIN THEM ON MAKERS</a>
                                 </div>
                             </div>
                         </div>
@@ -614,7 +717,8 @@ class App extends Component {
                     </aside>
 
                 </div>
-            </div>
+            </
+                div >
         )
     }
 }
