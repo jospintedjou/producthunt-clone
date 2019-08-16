@@ -256,6 +256,9 @@ aside.sidebar-right{
 .smalltext{
   font-size: 13px;
 }
+.mg-l-4{
+  margin-left: 4px;
+}
 .mg-l-5{
   margin-left: 5px;
 }
@@ -264,6 +267,9 @@ aside.sidebar-right{
 }
 .pd-20{
   padding: 20px;
+}
+.pd-2{
+  padding: 2px;
 }
 .pd-10{
   padding: 10px;
@@ -291,6 +297,9 @@ aside.sidebar-right{
 }
 .pd-r-15{
   padding-right: 15px !important;
+}
+.pd-r-80{
+  padding-right: 80px !important;
 }
 .pd-t-0{
   padding-top: 0px !important;
@@ -459,4 +468,27 @@ aside.sidebar-right{
 }
 .semibold{
   font-weight: 600;
+}
+.italic{
+  font-weight: 200;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.icon{
+  background-image: url(https://ph-static.imgix.net/upvote-burst-white.png?format=auto&auto=compress);
+  background-repeat: no-repeat;
+  background-size: 351px 15px;
+  height: 15px;
+  width: 15px;
+}
+.voteButton{
+  height: 74px;
+  width: 64px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  flex-direction: column;
 }

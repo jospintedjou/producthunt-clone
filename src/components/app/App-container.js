@@ -211,7 +211,7 @@ class App extends Component {
                                 <div className="content-title smalltext text-grey">
                                     <span className="content-title-text">Follow and support your future favorite products.</span>
                                 </div>
-                                <div className="item">
+                                <div className="item flex">
                                     <a href="/" className="link">
                                         <img className="product-img" src={require('../../assets/images/img-001.gif')}/>
                                         <div>
@@ -221,81 +221,17 @@ class App extends Component {
                                             </div>
                                             <div className="base-line flex">
                                                 <div className="left flex">
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <span className="nb-subscribers smalltext text-grey"> have subscribe.</span>
-                                                </div>
-                                                <div className="right flex">
-                                                    <span className="v-smalltext">SUBSCRIBE</span>
+                                                    <span className="nb-subscribers smalltext text-grey"> productivity</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
-                                </div>
-                                <div className="item">
-                                    <a href="/" className="link">
-                                        <img className="product-img" src={require('../../assets/images/img-001.gif')}/>
-                                        <div>
-                                            <div className="product-name">Gizer</div>
-                                            <div className="product-desc smalltext text-grey">
-                                                The Global Gaming Network for Mobile Esports
-                                            </div>
-                                            <div className="base-line flex">
-                                                <div className="left flex">
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <a href="" className="sub-link">
-                                                        <div className="user-img-box">
-                                                            <img className="user-img"
-                                                                 src="https://via.placeholder.com/24" alt=""/>
-                                                        </div>
-                                                    </a>
-                                                    <span className="nb-subscribers smalltext text-grey"> have subscribe.</span>
-                                                </div>
-                                                <div className="right flex">
-                                                    <span className="smalltext">SUBSCRIBE</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
+                                    <div className="mg-l-a">
+                                        <button className="button default voteButton">
+                                            <span className="icon mg-l-4"></span>
+                                            <span>105</span>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div className="container-foot flex smalltext">
                                     <a href="">VIEW ALL PRODUCTS</a>
@@ -696,29 +632,40 @@ class App extends Component {
                         </div>
                         <div className="container">
                             <div className="container-header flex font-size-init">
-                                <span>Founder Club </span>
+                                <span>Founder Club  <span className="v-smalltext orange pd-2">NEW</span></span>
                             </div>
-                            <div class="content pd-15">
-                                <div>
-                                    <a href="" className="img-container flex">
-                                        <div className="user-img-box">
-                                            <img className="user-img hide"
-                                                 src={require('../../assets/images/hands-up.png')}
-                                                 alt=""/>
-                                            <img className="user-img" src="https://via.placeholder.com/24" alt=""/>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div className="container-foot single-line flex smalltext">
-                                    <a href="">JOIN THEM ON MAKERS</a>
-                                </div>
+                            <div class="content pd-20" style={{
+                                backgroundImage: "url(" + require("../../assets/images/ounder-club-sidebar-card.png.jpg") + ")",
+                                backgroundPosition: "100% 100%", backgroundSize: "cover", backgroundRepeat: "no-repeat",
+                            }}>
+
+                                <a className="pd-r-80" href="">
+                                    <div className="smalltext bold text-white mg-b-10">Kickstart your startup</div>
+                                    <span className="smalltext semibold text-white">Access to potentially $12,000+ worth of savings on tools and services</span>
+                                </a>
+
                             </div>
+                        </div>
+                        <div className="container v-smalltext italic text-grey mg-b-20">
+                            <ul className="flex flex-wrap pd-l-0">
+                                <li><a className="mg-l-5" href="/">Blog&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Newsletter&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Apps&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">About&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">FAQ&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Terms&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Privacy and Cookies&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Twitter&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Facebook&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Instagram&nbsp;.</a></li>
+                                <li><a className="mg-l-5" href="/">Advertise&nbsp;.</a></li>
+                            </ul>
+                            <div>&copy; 2019 PRODUCT HUNT</div>
                         </div>
                     </aside>
 
                 </div>
-            </
-                div >
+            </div>
         )
     }
 }
