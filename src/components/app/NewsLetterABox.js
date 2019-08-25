@@ -20,7 +20,7 @@ class NewsLetterABox extends Component {
                     </a>
                     <div>
                                     <span
-                                        className="bold">{text} <span><FontAwesomeIcon icon={faHandPointDown} /></span> </span>
+                                        className="bold">{text} <span className="text-grey"><FontAwesomeIcon icon={faHandPointDown} /></span> </span>
                         <form>
                             <div className="mg-t-10">
                                 <input className="input button-lg pd-l-10" placeholder="Your email"

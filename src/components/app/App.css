@@ -254,31 +254,34 @@ aside.sidebar-right{
   margin-left: 8px;
 }
 .smalltext{
-  font-size: 13px;
+  font-size: 13px !important;
 }
 .mg-l-4{
-  margin-left: 4px;
+  margin-left: 4px !important;
 }
 .mg-l-5{
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 .mg-l-20{
-  margin-left: 20px;
+  margin-left: 20px !important;
+}
+.mg-r-3{
+  margin-right: 3px;
 }
 .mg-r-10{
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 .pd-20{
-  padding: 20px;
+  padding: 20px !important;
 }
 .pd-2{
-  padding: 2px;
+  padding: 2px !important;
 }
 .pd-10{
-  padding: 10px;
+  padding: 10px !important;
 }
 .pd-15{
-  padding: 15px;
+  padding: 15px  !important;
 }
 .pd-l-10{
   padding-left: 10px !important;
@@ -306,6 +309,9 @@ aside.sidebar-right{
 }
 .pd-t-0{
   padding-top: 0px !important;
+}
+.pd-r-18{
+  padding-right: 18px;
 }
 .v-smalltext{
   font-size: 11px;
@@ -335,8 +341,8 @@ aside.sidebar-right{
   padding-right: 8px;
 }
 .text-grey{
-  color: grey;
-  fill: grey;
+  color: grey !important;
+  fill: grey !important;
 }
 
 .container-foot{
@@ -479,7 +485,7 @@ aside.sidebar-right{
   flex-wrap: wrap;
 }
 .icon{
-  background-image: url(https://ph-static.imgix.net/upvote-burst-white.png?format=auto&auto=compress);
+  /*background-image: url(https://ph-static.imgix.net/upvote-burst-white.png?format=auto&auto=compress);*/
   background-repeat: no-repeat;
   background-size: 351px 15px;
   height: 15px;
@@ -507,4 +513,10 @@ aside.sidebar-right{
 .h-24{
   height: 24px;
   width: 24px;
+}
+.f-s-2em{
+  font-size: 1.3em !important;
+}
+.al-center{
+  text-align: center;
 }

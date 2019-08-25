@@ -4,6 +4,8 @@ import  img0 from "../../assets/images/img-001.gif";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faComment} from '@fortawesome/free-solid-svg-icons';
 import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
+import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import {faCaretUp} from '@fortawesome/free-solid-svg-icons';
 
 const Item = (props) => {
     const {image, name, desc, subscribers, nbSubscribers} = props.info;
@@ -71,8 +73,10 @@ const ItemVote = (props) => {
             </a>
             <div className="mg-l-a">
                 <button className="button default voteButton">
-                    <span className="icon mg-l-4"></span>
-                    <span>{nbVotes}</span>
+                    <span className="flex-col al-center">
+                        <div className="icon mg-l-4 pd-r-18"><FontAwesomeIcon fixedWidth="1em" size="2x" icon={faCaretUp}/></div>
+                        <span>{nbVotes}</span>
+                    </span>
                 </button>
             </div>
         </div>
@@ -95,17 +99,28 @@ class SimpleContainer extends Component {
                             <span className="content-title-text">{headMessage}</span>
                         </div>
                         : null}
-                    {withSubscribers == "yes" ?
-                        items.map(info => <Item info={info}/>) :
-                        items.map(info => <ItemVote info={info}/>) }
-
-                    <div className="container-foot flex smalltext">
-                        <a href="">VIEW ALL PRODUCTS</a>
-                        <div className="align-right">
-        <span>Working on something?
-        <a href="/"> Discover Ship</a></span>
+                    {withSubscribers ?
+                        (<div class="content">
+                                { items.map((info) => <Item info={info}/>) }
+                                <div className="container-foot flex smalltext">
+                                    <a href="">VIEW ALL PRODUCTS</a>
+                                    <div className="align-right">
+                        <span>Working on something?
+                        <a href="/"> Discover Ship</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                        :
+                        <div class="content">
+                            {items.map(info => <ItemVote info={info}/>)}
+                            <div className="container-foot single-line flex font text-grey pd-15">
+                                <a href="" className="text-grey">
+                                    <span className="mg-r-5 f-s-2em"><FontAwesomeIcon icon={faAngleDown}/></span> SHOW
+                                    MORE</a>
+                            </div>
                         </div>
-                    </div>
+                    }
                 </div>
             </div>
         )
