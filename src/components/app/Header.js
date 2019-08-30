@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
+import {Link } from "react-router-dom";
 import './App.css';
 import DropdownMenu from './App-view';
 
 class Header extends Component{
     render(){
+        const {darkMode} = this.props;
         return(
-            <div className="header">
+            <div className={"header " + (darkMode ? "darkMode" : null) }>
                 <div className="banner-in">
-                    <a className="icon-link" href="/">
+                    <Link className="icon-link" to="/">
                         <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" fillRule="evenodd">
                                 <path d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20"
@@ -16,7 +18,7 @@ class Header extends Component{
                                       fill="#FFF"></path>
                             </g>
                         </svg>
-                    </a>
+                    </Link>
                     <div className="search-block">
                         <form className="search-form" method="GET" action="/search">
                             <label className="">
@@ -28,8 +30,8 @@ class Header extends Component{
 							</svg>
 						</span>
                                 <div className="search-box">
-                                    <input autoComplete="off" className="input" data-test="search-input" name="q"
-                                           placeholder="Discover your next favorite thing…" value=""/>
+                                    <input autoComplete="off" className={"input " + (darkMode ? "input-dark" : null)} data-test="search-input" name="q"
+                                           placeholder="Discover your next favorite thing…"/>
                                 </div>
                                 <button className="close" type="reset">
 							<span>
@@ -45,11 +47,11 @@ class Header extends Component{
                     </div>
                     <nav className="top-nav">
                         <ul>
-                            <li><a href="/deals">Deals</a></li>
-                            <li><a href="/jobs">Jobs</a></li>
-                            <li><a href="/makers">Makers</a></li>
-                            <li><a href="/radio">Radio</a></li>
-                            <li><a href="/ships">Ships</a></li>
+                            <li><Link to="/deals">Deals</Link></li>
+                            <li><Link to="/jobs">Jobs</Link></li>
+                            <li><Link to="/makers">Makers</Link></li>
+                            <li><Link to="/radio">Radio</Link></li>
+                            <li><Link to="/ships">Ships</Link></li>
                             <li>
                                 <DropdownMenu/>
                             </li>
