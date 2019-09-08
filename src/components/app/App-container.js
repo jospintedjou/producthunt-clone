@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import firebase from '../firebase';
+import "firebase/auth";
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import storage from 'firebase/storage';
-import {Link} from 'react-router-dom';
-import logo from '../../logo.svg';
 import './App.css';
 import  img0 from "../../assets/images/img-001.gif";
 import signupImg from "../../assets/images/signup-promo.jpg";
 import founderImg from "../../assets/images/ounder-club-sidebar-card.png.jpg";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faComment} from '@fortawesome/free-solid-svg-icons';
-import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 import Header from './Header';
 import SimpleBox from './SimpleBox';
 import MakersBox from "./MakersBox";
@@ -27,7 +23,20 @@ class App extends Component {
         super(props);
         this.ref = firebase.firestore().collection('users');
         this.unsubscribe = null;
+        this.isSignedIn = false;
+        this.signInOptions = {};
+        this.uiConfig = {
+          signInFlow : 'popup',
+            signInOptions : [
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID
+            ],
+            callbacks : {
+              signInSuccess : () => false
+            }
+        };
         this.state = {
+            user: {},
             products: [],
             upcommings: [
                 {
@@ -83,6 +92,20 @@ class App extends Component {
 
     componentDidMount = () => {
         this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+        this.authListener();
+    };
+
+    authListener = () =>{
+        firebase.auth().onAuthStateChanged((user) => {
+            console.log(user);
+            if(user){
+                this.setState({user});
+                //localStorage.setItem('user', user.uid);
+            } else{
+                this.setState({'user': null});
+                //localStorage.removeItem('user');
+            }
+        })
     };
 
     //Recuppère la collection de la BD et a charge dans le state "bords"
@@ -200,6 +223,10 @@ class App extends Component {
             {title: "this idea will work out?", text: "", image: img0, nbVotes: "20", nbComments: "27"}];
         return (
             <div className="main-app">
+                {this.state.isSignedIn
+                    ? <div>USer signed in</div>
+                    : <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
+                }
                 <Header/>
                 <div className="page-container">
                     <div className="main">

@@ -3,7 +3,7 @@ import firestore from 'firebase/firestore'
 
 //const settings = {timestampsInSnapshots: true};
 
-const config = {
+export const config = {
     apiKey: "AIzaSyBCx5za-bZLTvDXg4ovc2mWjm5vr0xHG-Y",
     authDomain: "producthunt-clone-1b04d.firebaseapp.com",
     databaseURL: "https://producthunt-clone-1b04d.firebaseio.com",
