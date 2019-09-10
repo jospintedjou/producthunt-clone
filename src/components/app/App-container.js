@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import firebase from '../firebase';
 import "firebase/auth";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import storage from 'firebase/storage';
 import './App.css';
 import  img0 from "../../assets/images/img-001.gif";
 import signupImg from "../../assets/images/signup-promo.jpg";
@@ -16,6 +15,7 @@ import StoriesBox from "./StoriesBox";
 import SignupBox from "./SignupBox";
 import FounderBox from "./FounderBox";
 import FooterBox from './FooterBox';
+import LoginPopup from '../loginPopup/LoginPopup';
 
 class App extends Component {
 
@@ -23,7 +23,7 @@ class App extends Component {
         super(props);
         this.ref = firebase.firestore().collection('users');
         this.unsubscribe = null;
-        this.isSignedIn = false;
+        this.isSignedIn = localStorage.getItem('user');
         this.signInOptions = {};
         this.uiConfig = {
           signInFlow : 'popup',
@@ -97,13 +97,12 @@ class App extends Component {
 
     authListener = () =>{
         firebase.auth().onAuthStateChanged((user) => {
-            console.log(user);
             if(user){
                 this.setState({user});
-                //localStorage.setItem('user', user.uid);
+                localStorage.setItem('user', JSON.stringify(user));
             } else{
                 this.setState({'user': null});
-                //localStorage.removeItem('user');
+                localStorage.removeItem('user');
             }
         })
     };
@@ -124,7 +123,6 @@ class App extends Component {
         });
 
         this.setState({ products : products });
-        console.log(products);
     };
 
     render() {
@@ -225,9 +223,9 @@ class App extends Component {
             <div className="main-app">
                 {this.state.isSignedIn
                     ? <div>USer signed in</div>
-                    : <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
+                    : null
                 }
-                <Header/>
+                <Header user={this.state.user} authListener={this.authListener} uiConfig={this.uiConfig} />
                 <div className="page-container">
                     <div className="main">
                         <SimpleBox withSubscribers={true} title="Upcomming" title2="powered by Ship" items={this.state.upcommings}

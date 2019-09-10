@@ -2,12 +2,32 @@ import React, {Component} from 'react';
 import {Link } from "react-router-dom";
 import './App.css';
 import DropdownMenu from './App-view';
+import LoginPopup from '../loginPopup';
 
 class Header extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            showPopup: false
+        }
+    }
+    showPopup = (e) => {
+        e.preventDefault();
+        this.setState({showPopup:true});
+    };
+    closePopup = (e) => {
+        e.preventDefault();
+        this.setState({showPopup:false});
+    };
     render(){
-        const {darkMode} = this.props;
+        const {darkMode, authListener, uiConfig, user} = this.props;
+        console.log(user.uid);
         return(
             <div className={"header " + (darkMode ? "darkMode" : null) }>
+                {this.state.showPopup ?
+                <LoginPopup showPopup={this.showPopup} closePopup={this.closePopup}
+                            authListener={authListener} uiConfig={uiConfig} />
+                    : null }
                 <div className="banner-in">
                     <Link className="icon-link" to="/">
                         <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -58,10 +78,17 @@ class Header extends Component{
                         </ul>
                     </nav>
                     <div className="loginActions black">
-                        <div className="signBtn">
-                            <a className="button default" href="/login">LOG IN</a>
-                            <a className="button orange" href="/login">SIGN UP</a>
-                        </div>
+                        {user ?
+                            <div>Hello {user.displayName}
+                            <img src={user.photoURL}/></div>
+                            :
+                            <div className="signBtn">
+                                <a className="button default pointer" onClick={this.showPopup.bind(this)} href="#">LOG
+                                    IN</a>
+                                <a className="button orange pointer" onClick={this.showPopup.bind(this)} href="#">SIGN
+                                    UP</a>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

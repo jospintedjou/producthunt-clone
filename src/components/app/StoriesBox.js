@@ -7,7 +7,6 @@ import {faCaretUp} from '@fortawesome/free-solid-svg-icons';
 const ItemR = (props) => {
     const {title, text, image, nbVotes, nbComments} = props.info;
     const {imgSize} = props;
-    console.log(imgSize);
     return (
         <div className="item pd-l-0 pd-r-0">
             <a href="/" className="link">
